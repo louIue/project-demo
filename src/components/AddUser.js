@@ -4,31 +4,30 @@ class AddUser extends React.Component {
 
     state = {
         name: 'Viet',
-        address: 'Hanoi',
         age: 18
     };
 
-    handleOnchangeInput = (event) => {
+    handleOnchangeName = (event) => {
         this.setState({
-            name:event.target.value 
+            name: event.target.value
         })
     }
 
     handleOnchangeAge = (event) => {
         this.setState({
-            age:event.target.value 
+            age: event.target.value
         })
     }
 
-    handleOnSubmit =(event)=>{
+    handleOnSubmit = (event) => {
         event.preventDefault();
         this.props.handleAddNewUser({
-            id: Math.floor((Math.random()*100)+1)+ '-random',
-            name:this.state.name,
-            age:this.state.age
+            id: Math.floor((Math.random() * 100) + 1) + '-random',
+            name: this.state.name,
+            age: this.state.age
         });
     }
-    
+
     render() {
         return (
             <div>
@@ -38,7 +37,7 @@ class AddUser extends React.Component {
                     <input
                         value={this.state.name}
                         type="text"
-                        onChange={(event) => this.handleOnchangeInput(event)}
+                        onChange={(event) => this.handleOnchangeName(event)}
                     />
                     <button>submit</button>
 

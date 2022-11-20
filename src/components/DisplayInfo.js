@@ -27,6 +27,7 @@ class DisplayInfo extends React.Component {
                             return (
                                 <div key={user.id} className={+user.age > 18 ? "green" : "red"}>
                                     My name {user.name}
+                                    <br />
                                     My age {user.age}
                                     <hr />
                                 </div>
