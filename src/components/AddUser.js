@@ -21,8 +21,12 @@ class AddUser extends React.Component {
     }
 
     handleOnSubmit =(event)=>{
-        event.preventDefault()
-        console.log(this.state)
+        event.preventDefault();
+        this.props.handleAddNewUser({
+            id: Math.floor((Math.random()*100)+1)+ '-random',
+            name:this.state.name,
+            age:this.state.age
+        });
     }
     
     render() {
