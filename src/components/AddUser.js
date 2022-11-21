@@ -3,8 +3,8 @@ import React from "react";
 class AddUser extends React.Component {
 
     state = {
-        name: 'Viet',
-        age: 18
+        name: '',
+        age: ''
     };
 
     handleOnchangeName = (event) => {
